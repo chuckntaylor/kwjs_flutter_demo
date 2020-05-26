@@ -22,18 +22,20 @@ void main() {
     final events = await eventsApi.fetchEvents();
     final event = events[0];
 
-    // test that the title renders
+    // test that the screen renders
     await tester.pumpWidget(MaterialApp(home: EventScreen(event),));
 
     // create finders
-    final titleFinder = find.text("Let's Build a Mobile App Using React Native! Pt. 1");
+    final titleFinder = find.text(event.name);
     final dateFinder = find.text("April 22, 2020");
     final attendeesFinder = find.text('${event.attendeesCount} attendees');
+    final descriptionFinder = find.text(event.description);
 
     // run expects
     expect(titleFinder, findsNWidgets(2));
     expect(dateFinder, findsOneWidget);
     expect(attendeesFinder, findsOneWidget);
+    expect(descriptionFinder, findsOneWidget);
   });
 
 

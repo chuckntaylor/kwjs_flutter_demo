@@ -7,5 +7,23 @@
     "ends_at": "2020-04-23T00:00:00.000Z",
     "duration": 3600000,
     "attendees_count": 73
+  },
+  {
+    "id": "270320532",
+    "name": "Learn about Livewire and AlpineJS with Caleb Porzio! (Collab Meetup with GPUG)",
+    "description": "We're thrilled to announce that we would like to extend the invitation to all KWJS members to attend this month's GPUG Meetup: Caleb Porzio's Livewire and AlpineJS online presentation.\n\nWe thought to extend the invite out as he'll be talking about AlpineJS as well as Laravel (PHP) and would be awesome adding as many people as we can to the virtual event!\n\nWe're combining members from the following meetup groups:\n* GTA PHP\n* York Region PHP\n* Guelph PHP User Group\n* Full Stack Buffalo\n* Ottawa PHP\n* Laravel Toronto\n\nCaleb is a co-organizer of Full Stack Buffalo, speaker at the recent LaraConOnline (https://laracon.net/#speakers), and author of Livewire (https://laravel-livewire.com/) and AlpineJS (https://github.com/alpinejs/alpine). You can hear Caleb on his weekly \"No Plans To Merge\" podcast (https://noplanstomerge.simplecast.com/). In his spare time, Caleb shares his VS Code set-up at https://learn-vscode.com.\n\nBob Bloom just published a blog post about this meet-up, along with thoughts about \"code of conduct\" at https://bobbloom.me/joint-virtual-php-meet-up-april-29-2020.\n\nWe will publish the meeting URL 30 mins prior to the virtual meet-up.\n\nLooking forward to seeing you!",
+    "starts_at": "2020-04-29T23:00:00.000Z",
+    "ends_at": "2020-04-30T01:00:00.000Z",
+    "duration": 7200000,
+    "attendees_count": 14
+  },
+  {
+    "id": "270048552",
+    "name": "Let's Build a Mobile App Using React Native! Pt. 1",
+    "description": "Join us this month (virtually) as Lucas Gladding speaks about mobile application development using React Native. We'll be building an application in TypeScript, and including some component tests using Jest and React Native Testing Library.\n\nDon't forget, we'll be raffling for a 1 year subscription to any JetBrains product at every meetup!\n\nStay tuned for more details as we get closer to the meetup. Hoping all of you have been well during this time, and we look forward to seeing you! :)\n\nAgenda:\n7pm - 7:30pm: Presentation\n7:30pm - 8pm: Online Networking! (We'll explain how)",
+    "starts_at": "2020-04-22T23:00:00.000Z",
+    "ends_at": "2020-04-23T00:00:00.000Z",
+    "duration": 3600000,
+    "attendees_count": 73
   }
 ]
