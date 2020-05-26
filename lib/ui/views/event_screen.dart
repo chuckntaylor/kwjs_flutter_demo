@@ -60,6 +60,6 @@ class _EventScreenState extends State<EventScreen> {
 
   String _formatDate(String date) {
     final _parsedDate = DateTime.parse(date);
-    return formatDate(_parsedDate, ['M', ' ', 'd', ', ', 'yyyy']);
+    return formatDate(_parsedDate, ['MM', ' ', 'd', ', ', 'yyyy']);
   }
 }
