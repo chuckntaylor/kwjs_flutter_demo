@@ -1,7 +1,9 @@
 import 'package:date_format/date_format.dart';
 import 'package:flutter/material.dart';
 import 'package:kwjsflutter/business_logic/view_models/events_screen_viewmodel.dart';
+import 'package:kwjsflutter/business_logic/models/event.dart';
 import 'package:kwjsflutter/services/service_locator.dart';
+import 'package:kwjsflutter/ui/views/event_screen.dart';
 import 'package:provider/provider.dart';
 
 class EventsScreen extends StatefulWidget {
@@ -56,32 +58,37 @@ class _EventsScreenState extends State<EventsScreen> {
         builder: (context, model, child) => ListView.builder(
             itemCount: model.events.length,
             itemBuilder: (context, index) {
-              return Card(
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: IntrinsicHeight(
-                    child: Row(
-                      children: [
-                        Container(
-                            child: Text(_formatDate(model.events[index].startsAt),
-                            style: dateStyle,)
-                        ),
-                        VerticalDivider(
-                          width: 30,
-                          thickness: 1,
-                          color: Colors.grey
-                        ),
-                        Expanded(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text('${model.events[index].name}', style: titleStyle,),
-                              SizedBox(height: 8,),
-                              Text('${model.events[index].attendeesCount} attendees', style: attendeesStyle,)
-                            ],
+              return GestureDetector(
+                onTap: () {
+                  _navigateToEvent(model.events[index]);
+                },
+                child: Card(
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: IntrinsicHeight(
+                      child: Row(
+                        children: [
+                          Container(
+                              child: Text(_formatDate(model.events[index].startsAt),
+                              style: dateStyle,)
                           ),
-                        )
-                      ],
+                          VerticalDivider(
+                            width: 30,
+                            thickness: 1,
+                            color: Colors.grey
+                          ),
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text('${model.events[index].name}', style: titleStyle,),
+                                SizedBox(height: 8,),
+                                Text('${model.events[index].attendeesCount} attendees', style: attendeesStyle,)
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 ),
@@ -89,6 +96,10 @@ class _EventsScreenState extends State<EventsScreen> {
             }),
       ),
     );
+  }
+
+  _navigateToEvent(Event event) {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => EventScreen(event)));
   }
 
   String _formatDate(String date) {
