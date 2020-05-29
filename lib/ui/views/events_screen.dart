@@ -7,15 +7,24 @@ import 'package:kwjsflutter/ui/views/event_screen.dart';
 import 'package:provider/provider.dart';
 
 class EventsScreen extends StatefulWidget {
+
+  final EventsScreenViewModel viewModel;
+
+  const EventsScreen({Key key, this.viewModel}) : super(key: key);
+
+
   @override
   State createState() {
-    return _EventsScreenState();
+    return _EventsScreenState(viewModel);
   }
 }
 
 class _EventsScreenState extends State<EventsScreen> {
 
-  EventsScreenViewModel model = serviceLocator<EventsScreenViewModel>();
+  EventsScreenViewModel model;
+  _EventsScreenState([EventsScreenViewModel viewModel]) {
+    model = viewModel != null ? viewModel : serviceLocator<EventsScreenViewModel>();
+  }
 
   // Styles
   final TextStyle dateStyle = TextStyle(

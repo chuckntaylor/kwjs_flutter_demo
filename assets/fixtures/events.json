@@ -16,14 +16,5 @@
     "ends_at": "2020-04-30T01:00:00.000Z",
     "duration": 7200000,
     "attendees_count": 14
-  },
-  {
-    "id": "270048552",
-    "name": "Let's Build a Mobile App Using React Native! Pt. 1",
-    "description": "Join us this month (virtually) as Lucas Gladding speaks about mobile application development using React Native. We'll be building an application in TypeScript, and including some component tests using Jest and React Native Testing Library.\n\nDon't forget, we'll be raffling for a 1 year subscription to any JetBrains product at every meetup!\n\nStay tuned for more details as we get closer to the meetup. Hoping all of you have been well during this time, and we look forward to seeing you! :)\n\nAgenda:\n7pm - 7:30pm: Presentation\n7:30pm - 8pm: Online Networking! (We'll explain how)",
-    "starts_at": "2020-04-22T23:00:00.000Z",
-    "ends_at": "2020-04-23T00:00:00.000Z",
-    "duration": 3600000,
-    "attendees_count": 73
   }
 ]
